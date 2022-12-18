@@ -8,7 +8,7 @@ The DS2482 driver is originally from https://github.com/chasmack/seedling.
 
 ```bash
 cd project
-git submodule add https://github.com/fgervais/ds2482.git
+git submodule add https://github.com/fcomabella/ds2482.git
 ```
 
 ```python
