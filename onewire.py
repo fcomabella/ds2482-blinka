@@ -1,8 +1,14 @@
 import adafruit_onewire.bus
-import busio
+
+try:
+    from busio import OneWire as PatchedOneWire
+except ImportError:
+
+    class PatchedOneWire:
+        pass
 
 
-class OneWire(busio.OneWire):
+class OneWire(PatchedOneWire):
     def __init__(self, ds2482):
         self.ds2482 = ds2482
 
